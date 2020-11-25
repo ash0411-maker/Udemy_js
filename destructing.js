@@ -40,3 +40,27 @@ let savedFile = {
 function fileSummary({name, extension, size}) {
   return `${name}.${extension}の容量は${size}です。`
 }
+
+
+
+
+//-------    ES6（分割代入　配列）  --------------
+const companies = [
+  "google",
+  "facebook",
+  "uber"
+];
+
+const [ name ] = companies;
+
+
+
+const companies = [
+  "google",
+  "facebook",
+  "uber"
+];
+
+const [ name, ...rest ] = companies;
+name; => google
+rest; => [ "facebook", "uber"]
