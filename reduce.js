@@ -39,3 +39,23 @@ function balancedParend(string) {
 }
 
 balancedParens("()");
+
+
+
+
+
+
+
+function unique(array) {
+  return array.reduce(function(acc, element){
+      let existing = acc.find(function(target) {
+          return target === element;
+      });
+      
+      if(!existing) {
+          acc.push(element);
+      }
+      
+      return acc;
+  }, []);
+}
