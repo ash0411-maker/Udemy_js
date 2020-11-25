@@ -9,3 +9,16 @@ for(i = 0; i < numbers.length; i++) {
 numbers.reduce(function(sum, number){
   return sum + number
 }, 0);
+
+
+
+let primaryColors = [
+  { color: "red" },
+  { color: "yellow" },
+  { color: "blue" }
+];
+
+primaryColors.reduce(function(previous, primaryColor) {
+  previous.push(primaryColor.color)
+  return previous;
+}, []);
