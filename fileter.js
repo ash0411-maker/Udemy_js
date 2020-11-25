@@ -34,3 +34,10 @@ let comments = [
   {postId: 3, content: "gooooooood"},
   {postId: 4, content: "nice"}
 ];
+
+
+function commentsForPost(post, comments) {
+  return comments.filter(function(comment) {
+    return comment.postId === post.id
+  })
+}
