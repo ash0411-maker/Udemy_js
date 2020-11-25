@@ -12,6 +12,8 @@ numbers.reduce(function(sum, number){
 
 
 
+
+
 let primaryColors = [
   { color: "red" },
   { color: "yellow" },
@@ -22,3 +24,18 @@ primaryColors.reduce(function(previous, primaryColor) {
   previous.push(primaryColor.color)
   return previous;
 }, []);
+
+
+
+
+
+
+function balancedParend(string) {
+  return !string.split('').reduce(function(previous, char){
+    if(previous < 0) { return previous; }
+    if(char === "(") { return previous + 1; }
+    if(char === ")") { return previous - 1; }
+  }, 0)
+}
+
+balancedParens("()");
