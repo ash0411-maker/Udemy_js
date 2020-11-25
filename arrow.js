@@ -52,3 +52,16 @@ const teams = {
 // thisのエラー解決方法２つ
 // ①.bind(this)を記述する
 // ②var selt = this;を使って、thisの代わりにselfを使用する
+
+
+
+// ES6の解決方法
+const teams = {
+  members: ["太郎", "花子"],
+  teamName: "スーパーチーム",
+  teamSummary: function() {
+    return this.members.map((member) => {
+      return `${member}は${this.teamName}所属です。`
+    });
+  }
+};
