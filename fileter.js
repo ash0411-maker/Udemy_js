@@ -26,3 +26,11 @@ products.filter(function(product) {
     && product.quantity > 0
     && product.price < 10
 });
+
+
+let post = {id: 4, title: "aaaaaaaE"};
+let comments = [
+  {postId: 4, content: "nice"},
+  {postId: 3, content: "gooooooood"},
+  {postId: 4, content: "nice"}
+];
